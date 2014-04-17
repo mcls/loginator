@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loginator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="build/build.css">
+  </head>
+  <body>
+    <script>
+      window.gui = require('nw.gui');
+      window.node = require;
+    </script>
+    <script src="build/build.js"></script>
+
+
+    <div class="container">
+      <h1 class="title">Loginator</h1>
+      <input class="filepath" type="text" value="/usr/local/var/log/something.log" placeholder="Log location">
+      <input type="submit" value="Open" onclick="openFile()">
+
+      <div class="js-log-area">
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "loginator",
+  "version": "0.0.0",
+  "description": "Watch logs!",
+  "main": "index.html",
+  "window": {
+    "width": 800,
+    "height": 600
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maarten Claes",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-node-webkit-builder": "^0.1.20"
+  }
+}
