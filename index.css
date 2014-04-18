@@ -6,8 +6,28 @@ body {
   background-color: #FBF6E3;
 }
 
+
+.draggable {
+  -webkit-app-region: drag;
+}
+
+.titlebar {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  background-color: #FBF6E3;
+}
+
+.title {
+  font-size: 21px;
+  line-height: 34px;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  margin: 10px;
+  padding: 10px;
+  padding-top: 40px;
 }
 
 h1, p {
@@ -40,4 +60,8 @@ input[type="submit"] {
 
 b {
   color: #5F6E75;
+}
+
+.log-opener {
+  text-align: center;
 }

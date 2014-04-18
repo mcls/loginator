@@ -4,6 +4,7 @@
   "description": "Watch logs!",
   "main": "index.html",
   "window": {
+    "frame": false,
     "toolbar": false,
     "width": 800,
     "height": 600
