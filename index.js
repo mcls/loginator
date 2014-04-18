@@ -19,6 +19,7 @@ ansispan.foregroundColors = {
 
 window.openFile = function() {
 
+  var body = document.querySelector('body');
   var path = document.querySelector('.filepath').getAttribute('value');
   var tail = spawn("tail", ["-f", path]);
   var logArea = document.querySelector('.js-log-area');
@@ -31,5 +32,6 @@ window.openFile = function() {
 
   tail.stdout.on("data", function (data) {
     logArea.innerHTML = logArea.innerHTML + ansispan(codeify(data));
+    body.scrollTop = body.scrollHeight;
   });
 };
