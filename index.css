@@ -15,7 +15,8 @@ body {
   text-align: center;
   position: fixed;
   width: 100%;
-  background-color: #FBF6E3;
+  background-color: #FEFEFE;
+  opacity: 0.9;
 }
 
 .title {
