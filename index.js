@@ -1,9 +1,10 @@
 var win = gui.Window.get();
 
 var require = node;
+
 var ansispan = require('ansispan');
-var spawn = require('child_process').spawn;
 var fs = require('fs');
+var LogTracker = require('log-tracker');
 
 // Use custom colors
 ansispan.foregroundColors = {
@@ -17,20 +18,20 @@ ansispan.foregroundColors = {
   '37': '#F7F5E3'
 };
 
+var codeify = function(data) {
+  var stringified = String(data);
+  stringified = stringified.split("\n").join("</p><p class='code'>");
+  return "<p class='code'>" + stringified + "</p>";
+};
+
 window.openFile = function() {
-  var body = document.querySelector('body');
-  var path = document.querySelector('.filepath').getAttribute('value');
-  var tail = spawn("tail", ["-f", path]);
+  var body    = document.querySelector('body');
   var logArea = document.querySelector('.js-log-area');
-
-  var codeify = function(data) {
-    var stringified = String(data);
-    stringified = stringified.split("\n").join("</p><p class='code'>");
-    return "<p class='code'>" + stringified + "</p>";
-  };
-
   logArea.innerHTML = '';
-  tail.stdout.on("data", function (data) {
+
+  var logPath = document.querySelector('.filepath').getAttribute('value');
+  var logTracker = new LogTracker(logPath);
+  logTracker.on("data", function (data) {
     logArea.innerHTML = logArea.innerHTML + ansispan(codeify(data));
     body.scrollTop = body.scrollHeight;
   });
