@@ -1,0 +1,5 @@
+{
+  "name": "log-formatter",
+  "description": "LogFormatter",
+  "scripts": ["index.js"]
+}

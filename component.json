@@ -1,7 +1,10 @@
 {
   "name": "loginator",
   "paths": ["lib"],
-  "local": ["log-tracker"],
+  "local": [
+    "log-formatter",
+    "log-tracker"
+  ],
   "dependencies": {
     "necolas/normalize.css": "^3.0.0"
   },
