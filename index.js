@@ -11,8 +11,9 @@ window.openFile = function() {
   var logArea = document.querySelector('.js-log-area');
   logArea.innerHTML = '';
 
-  var logPath = document.querySelector('.filepath').getAttribute('value');
-  var logTracker = new LogTracker(logPath);
+  var logFile = document.querySelector('.filepath').files[0];
+  if (!logFile) { alert('Please select a log file.'); }
+  var logTracker = new LogTracker(logFile.path);
   logTracker.on("data", function (data) {
     var html = new LogFormatter(data).toHtml();
     logArea.innerHTML = logArea.innerHTML + html;
