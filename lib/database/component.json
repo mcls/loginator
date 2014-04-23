@@ -1,0 +1,5 @@
+{
+  "name": "database",
+  "description": "database",
+  "scripts": ["index.js"]
+}

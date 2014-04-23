@@ -2,6 +2,7 @@
   "name": "loginator",
   "paths": ["lib"],
   "local": [
+    "database",
     "log-formatter",
     "log-tracker"
   ],
