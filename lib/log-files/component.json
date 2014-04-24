@@ -1,0 +1,6 @@
+{
+  "name": "log-files",
+  "description": "LogFiles",
+  "scripts": ["index.js"],
+  "local": ["database"]
+}

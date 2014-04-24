@@ -3,6 +3,7 @@
   "paths": ["lib"],
   "local": [
     "database",
+    "log-files",
     "log-formatter",
     "log-tracker"
   ],
